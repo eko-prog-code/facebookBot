@@ -1,5 +1,10 @@
-# Facebook_Puppeteer_Bot
+## Nodejs Bot Driver Facebook Status 
 
-In this Project I coded a facebook puppeteer robot to automatically send a post every 10 seconds you can watch a tutorial showing the detailed explanation of this on my youtube channel
+| Feature                        | Command                  | Status         |
+| ------------------------------ | ------------------------ | -------------- |
+| Create status with text        | *npm run bot-status*     | **Ready**      |
+| Create status with Image       | *npm run bot-status-img* | **Ready**      |
+| Create story status with Image | *npm run bot-group*      | **Ready**      |
+| Create story status with text  | *Uknown*                 | **Comingsoon** |
 
-:) Thanks
+### Author
