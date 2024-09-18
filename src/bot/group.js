@@ -15,14 +15,50 @@ const cookiesFilePath = path.resolve(__dirname, './cookies.json');
   const { default: clipboardy } = await import('clipboardy');
 
   const groupUrls = [
-    'https://www.facebook.com/groups/912305268951000',
-    'https://www.facebook.com/groups/800332590059070',
-    'https://www.facebook.com/groups/136712459711842'
+    'https://www.facebook.com/groups/173219855023', //STIKES BHAMADA SLAWI
+    'https://www.facebook.com/groups/313975032061603', //STIKES INDONESIA PADANG
+    'https://www.facebook.com/groups/237895017791947', //PPNI (PERSATUAN PERAWAT NASIONAL INDONESIA)
+    'https://www.facebook.com/groups/173474462664261', //STIKES JENDRAL ACHMAD YANI CIMAHI
+    'https://www.facebook.com/groups/169645779731418', //STIKES, D3 KEBIDANAN, D3 KEPERAWATAN NWU UNGARAN
+    'https://www.facebook.com/groups/145117078878555', //STIKES SANTO BORROMEUS
+    'https://www.facebook.com/groups/164289776933433', //STIKES BHAKTI KENCANA ALUMNUS
+    'https://www.facebook.com/groups/102612199669', //STIKES ST.ELISABETH - SEMARANG
+    'https://www.facebook.com/groups/stikesmh', //STIKes Maluku Husada
+    'https://www.facebook.com/groups/2220466661538254', //PRODI KESMAS STIKES MALUKU HUSADA
+    'https://www.facebook.com/groups/614824051999337', //Stikes Maluku Husada 2015
+    'https://www.facebook.com/groups/224112662436172', //Stikes Bina Bangsa Majene 
+    'https://www.facebook.com/groups/90409058754', //STIKes Dharma Husada Bandung
+    'https://www.facebook.com/groups/118177181582117', //IKA - STIKES Insan Unggul Surabaya
+    'https://www.facebook.com/groups/193993520612884', //IKA STIKES ABI SURABAYA
+    'https://www.facebook.com/groups/1438896363012858', //Forum Alumni Stikes A.Yani Cimahi
+
+    //'https://www.facebook.com/stikesyayasanrsdrsoetomo', //Stikes YRSDS 
+    //'https://www.facebook.com/stikeshangtuahsurabaya', //Stikes.hangtuahsby
+    //'https://www.facebook.com/profile.php?id=100066803319027', //STIKes Dharma Husada Bandung
+    //'https://www.facebook.com/stikesbhaktipertiwi.id', //STIKes Bhakti Pertiwi Indonesia 
+    //'https://www.facebook.com/profile.php?id=100066803319027', //STIKes Dharma Husada Bandung 
+    //'https://www.facebook.com/stikessumedan', //STIKES Sumatera Utara 
+    //'https://www.facebook.com/stikessantaelisabethmedan', //STIKes Santa Elisabeth Medan
+    //'https://www.facebook.com/stikesngestiwaluyo.parakan.3', //Stikes Ngesti Waluyo Parakan
+    //'https://www.facebook.com/profile.php?id=100083353901881', //PROGRAM STUDI DIII KEPERAWATAN STIKES PERINTIS SUMATERA BARAT
+    //'https://www.facebook.com/groups/mwibut', //ALUMNI PERAWAT STIKES BORROMEUS BANDUNG
+    // 'https://www.facebook.com/stikes.williamboothsurabaya', //Stikes William Booth Surabaya 
+    // 'https://www.facebook.com/perawatstikesby', //Keperawatan Stikes Surabaya
+    //'https://www.facebook.com/alumniunusa', //Alumni Unusa / Stikes Yarsis 
   ];
 
   const sentenceList = [
-    `Harga kopi di kota anda berapa??...`,
-    `Yuk commeent kota..Harga/grade?`
+    `https://youtu.be/7twuULLhdrs`,
+    `Karir tenaga medis sering kali dimulai dari tahap **fresh graduate**, di mana lulusan baru menempuh **internship** atau magang klinis sebagai langkah awal. Setelah itu, biasanya mereka mulai bekerja di rumah sakit (RS) atau klinik untuk mendapatkan pengalaman lebih lanjut dan membangun kompetensi klinis yang solid.
+
+Namun, ada masa **gap** di mana mereka mungkin merasa tidak pasti atau menghadapi tantangan untuk memulai langkah karir berikutnya. Di sinilah konsep **"mulai aja dahulu"** muncul sebagai dorongan untuk memanfaatkan peluang praktis seperti membuka layanan seperti **Rawat Luka**, **Sunat Modern**, atau **Pengobatan Umum**. Ini adalah transisi alami yang memungkinkan tenaga medis tetap produktif dan terus berkembang, meskipun berada di masa peralihan.
+
+Untuk mendukung transformasi ini, lahirlah **MedicTech RME**, sebuah solusi digital yang mengubah cara fasilitas kesehatan (fasyankes) mencatat dan mengelola riwayat pengobatan pasien. Dengan digitalisasi, catatan pengobatan pasien menjadi lebih aman, terintegrasi, dan dapat diakses secara **real-time**, termasuk melalui platform **Satu Sehat Kemenkes**. 
+
+**MedicTech RME** memungkinkan pengobatan yang lebih cepat, presisi, dan aman dengan rekomendasi obat yang didasarkan pada data kesehatan yang akurat. Hal ini membawa manfaat besar bagi tenaga medis dan masyarakat, meningkatkan keamanan, efisiensi, dan kepercayaan terhadap layanan kesehatan.
+
+Inilah visi karir medis yang berkembang: beranjak dari pengalaman klinis dasar, melalui masa transisi dengan inovasi dan adaptasi, hingga menjadi bagian dari ekosistem **digital health** yang berfokus pada kualitas, keselamatan, dan presisi.`,
+    `MedicTech RME vendor resmi satu sehat`
   ].join('\n'); // Gabungkan kalimat menjadi satu string
 
   // Function to create a delay
@@ -36,7 +72,7 @@ const cookiesFilePath = path.resolve(__dirname, './cookies.json');
     });
 
     const page = await browser.newPage();
-    
+
     // Load cookies if they exist
     if (fs.existsSync(cookiesFilePath)) {
       try {

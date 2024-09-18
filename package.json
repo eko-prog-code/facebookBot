@@ -6,7 +6,8 @@
   "scripts": {
     "bot-status": "node src/bot/status.js",
     "bot-status-img": "node src/bot/statusImg.js",
-    "bot-group": "node src/bot/group.js"
+    "bot-group": "node src/bot/group.js",
+    "bot-srcap-group": "node src/bot/scrapComment.js"
   },
   "keywords": [],
   "author": "",
